@@ -16,10 +16,12 @@ public class Raquette : MonoBehaviour
     void Update()
     {
         float h = Input.GetAxisRaw("Horizontal");
+        float hmouse = Input.GetAxisRaw("Mouse X");
         Vector3 pos = transform.position;
         pos.x = Mathf.Clamp(pos.x, -clampX, clampX);
         transform.position = pos;
         transform.Translate(Vector3.right * h * Time.deltaTime * speed);
+        transform.Translate(Vector3.right * hmouse * Time.deltaTime * speed);
 
 
         // Vector3 mouvement = new Vector3(pos.x, 0f, 0f);
