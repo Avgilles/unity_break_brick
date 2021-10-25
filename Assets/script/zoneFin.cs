@@ -13,7 +13,7 @@ public class zoneFin : MonoBehaviour
         if (other.gameObject.tag == "Balle")
         {
             Debug.Log("out");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, 0);
         }
     }
 }
